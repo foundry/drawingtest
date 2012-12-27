@@ -32,12 +32,11 @@
 
     self.rectToDrawFrom1 = [[JMRect alloc] initWithRect:NSMakeRect(0, 0, 512, 512)];
     self.rectToDrawFrom2 = [[JMRect alloc] initWithRect:NSMakeRect(0, 0, 512, 512)];
-        //self.view.firstImage = [NSImage imageNamed:@"h_red"];
-        //self.view.secondImage = [NSImage imageNamed:@"h_yellow"];
+
     self.view.firstImage = [NSImage imageNamed:IMAGE1];
     self.view.secondImage = [NSImage imageNamed:IMAGE2];
     
-    [self crappyCode];
+    [self drawImages];
     
 }
 
@@ -46,44 +45,20 @@
     [self initialise];
 }
 
-- (IBAction)firstAction:(id)sender {
-    if (self.view.firstImage) {
-        self.view.firstImage = nil;
-        
-    } else {
-            //self.view.firstImage = [NSImage imageNamed:@"h_red"];
-        self.view.firstImage = [NSImage imageNamed:IMAGE1];
-    }
-    [self.view setNeedsDisplay:YES];
-
-}
-
-- (IBAction)secondAction:(id)sender {
-    if (self.view.secondImage) {
-        self.view.secondImage = nil;
-        
-    } else {
-            //self.view.secondImage = [NSImage imageNamed:@"h_yellow"];
-        self.view.secondImage = [NSImage imageNamed:IMAGE2];
-    }
-    [self.view setNeedsDisplay:YES];
-};
 
 - (IBAction)mainAction:(id)sender {
-    [self crappyCode];
+    [self drawImages];
 }
 
 - (IBAction)firstToggle:(NSSegmentedControl*)sender {
     if ([sender isSelectedForSegment:0])
         {
         self.view.firstImage = nil;
-
         }
     else {
-            //self.view.firstImage = [NSImage imageNamed:@"h_red"];
         self.view.firstImage = [NSImage imageNamed:IMAGE1];
     }
-    [self crappyCode];
+    [self drawImages];
 
     [self.view setNeedsDisplay:YES];
 
@@ -93,36 +68,25 @@
     if ([sender isSelectedForSegment:0])
         {
         self.view.secondImage = nil;
-
         }
     else {
-            //self.view.secondImage = [NSImage imageNamed:@"h_yellow"];
         self.view.secondImage = [NSImage imageNamed:IMAGE2];
-
     }
-    [self crappyCode];
+    [self drawImages];
     [self.view setNeedsDisplay:YES];
 
 }
 
-- (void) crappyCode {
+- (void) drawImages {
     NSRect rectToDrawIn1 = [self.rectToDrawIn1 rect];
     NSRect rectToDrawFrom1 = [self.rectToDrawFrom1 rect];
-    NSLog (@"self.rectToDrawIn1  %@",self.rectToDrawIn1 );
-    NSLog (@"self.rectToDrawFrom1  %@",self.rectToDrawFrom1 );
-    
-    
     NSRect rectToDrawIn2 = [self.rectToDrawIn2 rect];
     NSRect rectToDrawFrom2 = [self.rectToDrawFrom2 rect];
-    NSLog (@"self.rectToDrawIn2  %@",self.rectToDrawIn2 );
-    NSLog (@"self.rectToDrawFrom2  %@",self.rectToDrawFrom2 );
 
-    
     NSImage *newImage;
     newImage = [[NSImage alloc] initWithSize:self.view.bounds.size];
     [newImage lockFocus];
     
-
     if (self.view.firstImage){
     [self.view.firstImage drawInRect:rectToDrawIn1
                  fromRect:rectToDrawFrom1
@@ -145,28 +109,7 @@
 }
 
 
-- (NSImage*) resizeImage:(NSImage*)sourceImage size:(NSSize)size
-{
-    
-    NSRect targetFrame = NSMakeRect(0, 0, size.width, size.height);     // exists
-    NSImage* targetImage = nil;
-    NSImageRep *sourceImageRep =
-    [sourceImage bestRepresentationForRect:targetFrame
-                                   context:nil
-                                     hints:nil];
-    
-    targetImage = [[NSImage alloc] initWithSize:size];
-    
-        //  NSGraphicsContext* context = [NSGraphicsContext currentContext];
-    [targetImage lockFocus];
-        // [context setImageInterpolation:NSImageInterpolationLow];
-    [sourceImageRep drawInRect: targetFrame];
-    [targetImage unlockFocus];
-        // [NSGraphicsContext setCurrentContext:context];
-    
-    return targetImage;
-    
-}
+
 
 
 @end

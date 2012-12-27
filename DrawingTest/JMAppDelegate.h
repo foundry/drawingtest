@@ -26,8 +26,6 @@
 @property (assign) IBOutlet NSWindow *window;
 
 @property (weak) IBOutlet JMView *view;
-- (IBAction)firstAction:(id)sender;
-- (IBAction)secondAction:(id)sender;
 - (IBAction)mainAction:(id)sender;
 - (IBAction)firstToggle:(id)sender;
 - (IBAction)secondToggle:(id)sender;
