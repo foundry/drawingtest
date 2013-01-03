@@ -1310,7 +1310,7 @@
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
-				<string key="NSWindowContentMaxSize">{1, 546}</string>
+				<string key="NSWindowContentMaxSize">{1076, 546}</string>
 				<string key="NSWindowContentMinSize">{1076, 546}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
 					<reference key="NSNextResponder"/>
@@ -1322,7 +1322,7 @@
 							<string key="NSFrame">{{20, 20}, {512, 512}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
+							<reference key="NSNextKeyView" ref="796998310"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">JMView</string>
 						</object>
@@ -1433,7 +1433,7 @@
 									<string key="NSFrame">{{237, 11}, {45, 17}}</string>
 									<reference key="NSSuperview" ref="796998310"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="112379782"/>
+									<reference key="NSNextKeyView" ref="282745694"/>
 									<string key="NSReuseIdentifierKey">_NS:1535</string>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSTextFieldCell" key="NSCell" id="756730485">
@@ -1934,7 +1934,7 @@
 									<string key="NSFrame">{{237, 11}, {45, 17}}</string>
 									<reference key="NSSuperview" ref="112379782"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="282745694"/>
+									<reference key="NSNextKeyView" ref="677216278"/>
 									<string key="NSReuseIdentifierKey">_NS:1535</string>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSTextFieldCell" key="NSCell" id="1009119123">
@@ -2674,7 +2674,7 @@
 									<string key="NSFrame">{{54, 7}, {134, 21}}</string>
 									<reference key="NSSuperview" ref="282745694"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="677216278"/>
+									<reference key="NSNextKeyView" ref="112379782"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSSliderCell" key="NSCell" id="567964404">
@@ -3140,7 +3140,7 @@
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMinSize">{1076, 568}</string>
-				<string key="NSMaxSize">{1, 568}</string>
+				<string key="NSMaxSize">{1076, 568}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="976324537">
@@ -6661,18 +6661,12 @@
 					<string key="className">JMAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="firstAction:">id</string>
 						<string key="firstToggle:">id</string>
 						<string key="mainAction:">id</string>
 						<string key="reset:">id</string>
-						<string key="secondAction:">id</string>
 						<string key="secondToggle:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="firstAction:">
-							<string key="name">firstAction:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 						<object class="IBActionInfo" key="firstToggle:">
 							<string key="name">firstToggle:</string>
 							<string key="candidateClassName">id</string>
@@ -6683,10 +6677,6 @@
 						</object>
 						<object class="IBActionInfo" key="reset:">
 							<string key="name">reset:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="secondAction:">
-							<string key="name">secondAction:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="secondToggle:">

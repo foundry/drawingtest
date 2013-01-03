@@ -2,8 +2,8 @@
 //  JMView.h
 //  DrawingTest
 //
-//  Created by jonathan on 24/12/2012.
-//  Copyright (c) 2012 foundry. All rights reserved.
+//  Created by jwm on 24/12/2012.
+//  Copyright (c) 2013 jwm / Foundry. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
