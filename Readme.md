@@ -1,3 +1,5 @@
+[](https://raw.githubusercontent.com/foundry/drawingtest/master/screenshot.png)
+
 __Drawing Test__
 
 This is a little toy interface to test this NSImage method
