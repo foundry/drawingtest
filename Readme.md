@@ -1,4 +1,4 @@
-[](https://raw.githubusercontent.com/foundry/drawingtest/master/screenshot.png)
+<img src = "https://raw.githubusercontent.com/foundry/drawingtest/master/screenshot.png">
 
 __Drawing Test__
 
